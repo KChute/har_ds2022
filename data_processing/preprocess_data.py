@@ -63,6 +63,13 @@ def load_dataset(dataset, pred_type='actions', include_null=False):
                            'drink_from_cup', 'toggle_switch']
         elif pred_type == 'locomotion':
             class_names = ['stand', 'walk', 'sit', 'lie']
+    elif dataset == 'XXX':
+        sampling_rate = 50
+        has_null = True
+        if pred_type == 'label':
+            class_names = ['climbing_stairs']
+        if pred_type == 'floor'
+            class_names = ['floor_0', 'floor_1', 'floor_2', 'floor_3', 'floor_4']
 
     data = pd.read_csv(os.path.join('data/', dataset + '_data.csv'), sep=',', header=None, index_col=None)
     X, y = preprocess_data(data, dataset, pred_type, has_null, include_null)
@@ -248,6 +255,15 @@ def adjust_labels(data_y, dataset, pred_type='actions'):
             data_y[data_y == 'clean_table'] = 15
             data_y[data_y == 'drink_from_cup'] = 16
             data_y[data_y == 'toggle_switch'] = 17
+    elif dataset == 'XXX':
+        if pred_type == 'label':
+            data_y[data_y == 'climbing_stairs'] = 1
+        if pred_type == 'floor':
+            data_y[data_y == 'floor_0'] = 1
+            data_y[data_y == 'floor_1'] = 2
+            data_y[data_y == 'floor_2'] = 3
+            data_y[data_y == 'floor_3'] = 4
+            data_y[data_y == 'floor_4'] = 5
     return data_y
 
 
