@@ -63,7 +63,7 @@ def load_dataset(dataset, pred_type='actions', include_null=False):
                            'drink_from_cup', 'toggle_switch']
         elif pred_type == 'locomotion':
             class_names = ['stand', 'walk', 'sit', 'lie']
-    elif dataset == 'XXX':
+    elif dataset =='stairs':
         sampling_rate = 50
         has_null = True
         if pred_type == 'label':
@@ -255,7 +255,7 @@ def adjust_labels(data_y, dataset, pred_type='actions'):
             data_y[data_y == 'clean_table'] = 15
             data_y[data_y == 'drink_from_cup'] = 16
             data_y[data_y == 'toggle_switch'] = 17
-    elif dataset == 'XXX':
+    elif dataset == 'stairs':
         if pred_type == 'label':
             data_y[data_y == 'climbing_stairs'] = 1
         if pred_type == 'floor':
