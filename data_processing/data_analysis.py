@@ -4,7 +4,7 @@
 # Author: Marius Bock
 # Email: marius.bock(at)uni-siegen.de
 ##################################################
-#This is a comment woohoo
+
 
 import numpy as np
 
