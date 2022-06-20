@@ -68,7 +68,7 @@ def load_dataset(dataset, pred_type='actions', include_null=False):
         has_null = True
         if pred_type == 'label':
             class_names = ['climbing_stairs']
-        if pred_type == 'floor'
+        if pred_type == 'floor':
             class_names = ['floor_0', 'floor_1', 'floor_2', 'floor_3', 'floor_4']
 
     data = pd.read_csv(os.path.join('data/', dataset + '_data.csv'), sep=',', header=None, index_col=None)
