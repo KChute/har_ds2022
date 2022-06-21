@@ -116,9 +116,9 @@ def preprocess_data(data, ds, pt='actions', has_null=False, include_null=True):
             else:
                 data = data[(data.iloc[:, -1] != 'null_class')]
 
-    if (ds == 'wetlab' and pt == 'actions') or ((ds == 'opportunity' or ds == 'opportunity_ordonez') and pt == "locomotion"):
+    if (ds == 'wetlab' and pt == 'actions') or ((ds == 'opportunity' or ds == 'opportunity_ordonez') and pt == "locomotion") or (ds == 'stairs' and pt == 'label'):
         X, y = data.iloc[:, :-2], adjust_labels(data.iloc[:, -2], ds, pt).astype(int)
-    elif (ds == 'wetlab' and pt == 'tasks') or ((ds == 'opportunity' or ds == 'opportunity_ordonez') and pt == "gestures"):
+    elif (ds == 'wetlab' and pt == 'tasks') or ((ds == 'opportunity' or ds == 'opportunity_ordonez') and pt == "gestures") or (ds == 'stairs' and pt == 'floor'):
         X, y = data.iloc[:, :-2], adjust_labels(data.iloc[:, -1], ds, pt).astype(int)
     else:
         X, y = data.iloc[:, :-1], adjust_labels(data.iloc[:, -1], ds, pt).astype(int)
