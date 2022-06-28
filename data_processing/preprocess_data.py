@@ -231,7 +231,7 @@ def adjust_labels(data_y, dataset, pred_type='actions'):
         data_y[data_y == 'walk'] = 4
         data_y[data_y == 'stairsup'] = 5
         data_y[data_y == 'stairsdown'] = 6
-    elif dataset == 'opportunity' or 'opportunity_ordonez':
+    elif dataset == 'opportunity' or dataset == 'opportunity_ordonez':
         if pred_type == 'locomotion':
             data_y[data_y == "stand"] = 1
             data_y[data_y == "walk"] = 2
