@@ -1,48 +1,25 @@
-# Improving Deep Learning for HAR with shallow LSTMs (ISWC 21' best-paper award)
+# Understanding Recurrent Neural Networks: Exploring the DeepConvLSTM framework for Human Activity Recognition (HAR)
 
-This is the official GitHub page of the **best-paper award-winning** publication "Improving Deep Learning for HAR with shallow LSTMs" presented at the International Symposium on Wearable Computers 21' (ISWC 21'). [[cite our work]](#cite)
+
+This is the GitHub page of the repository containing our work project for the Data Science Seminar for the Summer 2022 semester at the University of Siegen. Our work was closely supervised by Marius Bock, and based on his work on Shallow LSTMs (CITE HIS WORK). This repository contains the same code utilised for that work, including specific modifications for our particular needs. The repository our code was based on can be found here: https://github.com/mariusbock/dl-for-har 
+
+The Google Colab notebook in which we run our experiment by analysing the files of this repository can be found here: https://colab.research.google.com/drive/1ETH8zCtEHfxq0vSN9m7zoXKhjaZkTYEe?usp=sharing 
 
 ## Abstract
-Recent studies in Human Activity Recognition (HAR) have shown that Deep Learning methods are able to outperform classical Machine Learning algorithms. One popular Deep Learning architecture in HAR is the DeepConvLSTM. In this paper we propose to alter the DeepConvLSTM architecture to employ a 1-layered instead of a 2-layered LSTM. We validate our architecture change on 5 publicly available HAR datasets by comparing the predictive performance with and without the change employing varying hidden units within the LSTM layer(s). Results show that across all datasets, our architecture consistently improves on the original one: Recognition performance increases up to 11.7% for the F1-score,and our architecture significantly decreases the amount of learnable parameters. This improvement over DeepConvLSTM decreases training time by as much as 48%. Our results stand in contrast to the belief that one needs at least a 2-layered LSTM when dealing with sequential data. Based on our results we argue that said claim might not be applicable to sensor-based HAR.
+About the use of Deep Learning methods for the detection and prediction of patterns of human activity, known as Human Activity Recognition (HAR). DeepConvLSTM is a popular Deep Learning architecture for HAR data. Our work focuses on investigating the necessity and impact of LSTM layers in evaluating a HAR dataset for a case of climbing stairs and another case focused on floor prediction while climbing stairs. We compare the predictive performance of each case by employing three different types of DeepConvLSTM architecture (0-layers, 1-layer, and 2-layers of LSTMs) with the size of 128 hidden units. Results show that across each evaluation case, the 0-layered model had a better predictive performance in the climbing stairs detections, and the 1-layered model had an overall better predictive performance in the floor prediction case. Based on the findings, we also describe the observed limitations as well opportunities for future research. With our work, we hope to contribute to the discussion on the utility of the DeepConvLSTM framework, by identifying and understanding the strengths and weaknesses of each architecture.
 
 <p align="center">
   <img width="" height="" src="images/architecture.png">
 </p>
 
 ## Results
-Results were obtained on the Wetlab [[4]](#4), RWHAR [[6]](#6), SBHAR [[2]](#2) and HHAR [[5]](#5) dataset using LOSO cross-validation and Opportunity dataset [[3]](#3) using the train-test split as employed in [[1]](#1) averaged across 5 runs using a set of 5 different random seeds.
+Results were obtained using a dataset of raw 3D accelerometer data using LOSO cross-validation averaged across 5 runs using a set of 5 different random seeds.
 
 ### Overall results
 <p align="center">
   <img width="" height="" src="images/results.png">
 </p>
 
-### Standard deviation across runs
-<p align="center">
-  <img width="" height="" src="images/average_stdev_runs.png">
-</p>
-
-### Per-class results
-
-<p align="center">
-  <img width="" height="" src="images/per_class_HHAR.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_RWHAR.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_Wetlab.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_sbhar.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_opportunity.png">
-</p>
 
 ## Repo Structure
 - log_files: folder containing all log files of experiments mentioned in the paper
