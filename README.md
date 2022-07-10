@@ -13,39 +13,13 @@ About the use of Deep Learning methods for the detection and prediction of patte
 </p>
 
 ## Results
-Results were obtained on the Wetlab [[4]](#4), RWHAR [[6]](#6), SBHAR [[2]](#2) and HHAR [[5]](#5) dataset using LOSO cross-validation and Opportunity dataset [[3]](#3) using the train-test split as employed in [[1]](#1) averaged across 5 runs using a set of 5 different random seeds.
+Results were obtained using a dataset of raw 3D accelerometer data using LOSO cross-validation averaged across 5 runs using a set of 5 different random seeds.
 
 ### Overall results
 <p align="center">
   <img width="" height="" src="images/results.png">
 </p>
 
-### Standard deviation across runs
-<p align="center">
-  <img width="" height="" src="images/average_stdev_runs.png">
-</p>
-
-### Per-class results
-
-<p align="center">
-  <img width="" height="" src="images/per_class_HHAR.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_RWHAR.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_Wetlab.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_sbhar.png">
-</p>
-
-<p align="center">
-  <img width="" height="" src="images/per_class_opportunity.png">
-</p>
 
 ## Repo Structure
 - log_files: folder containing all log files of experiments mentioned in the paper
