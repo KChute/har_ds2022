@@ -1,6 +1,6 @@
 # Understanding Recurrent Neural Networks: Exploring the DeepConvLSTM framework for Human Activity Recognition (HAR)
 
-Project Members:<br/>
+<b>Project Members:<b><br/>
 Andrew Marsh <br/>
 Belén Giménez <br/>
 Akwasi Gyabaah <br/>
