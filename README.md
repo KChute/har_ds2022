@@ -1,10 +1,10 @@
 # Understanding Recurrent Neural Networks: Exploring the DeepConvLSTM framework for Human Activity Recognition (HAR)
 
 Project Members:<br/>
-Andrew Marsh 
-Belén Giménez 
-Akwasi Gyabaah 
-Kaycie Chute 
+Andrew Marsh <br/>
+Belén Giménez <br/>
+Akwasi Gyabaah <br/>
+Kaycie Chute <br/>
 
 
 This is the GitHub page of the repository containing our work project for the Data Science Seminar for the Summer 2022 semester at the University of Siegen. Our work was closely supervised by Marius Bock, and based on his work on Shallow LSTMs [[1]](#1). This repository contains the same code utilised for that work, including specific modifications for our particular needs. The repository our code was based on can be found here: https://github.com/mariusbock/dl-for-har 
